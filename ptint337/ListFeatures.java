@@ -3,9 +3,9 @@ import java.util.*;
 
 public class ListFeatures {
 	static class Pets {
-		ArrayList<Integer>  arrayList () {
-			ArrayList<Integer> outArrayList = new  ArrayList<Integer>();
-			Collections.addAll(outArrayList, 1, 2, 3, 4, 5, 6, 7);
+		ArrayList<String>  arrayList () {
+			ArrayList<String> outArrayList = new  ArrayList<String>();
+			Collections.addAll(outArrayList, "a", "b", "c", "d", "e", "f", "j");
 			return outArrayList;
 		}
 	}
@@ -13,41 +13,42 @@ public class ListFeatures {
 	public static void main (String[] args) {
 		Pets ololo = new Pets();
 		Random rand = new Random(47);
-		List<Integer> pets = ololo.arrayList();
+		List<String> pets = ololo.arrayList();
 		System.out.println("1: " + pets);
-		Integer h =101;
+		String h ="lol";
 		pets.add(h); 
 		System.out.println("2: " + pets);
 		System.out.println("3: " + pets.contains(h));
 		pets.remove(h);
-		Integer p = pets.get(2);
+		String p = pets.get(2);
 		System.out.println("4: " + p + " " + pets.indexOf(p));
-		Integer cymric = 202;
+		String cymric = "lol2";
 		System.out.println("5: " + pets.indexOf(cymric));
 		System.out.println("6: " + pets.remove(cymric));
 		System.out.println("7: " + pets.remove(p));
 		System.out.println("8: " + pets);
-		pets.add(3, 303);
+		pets.add(3, "lol3");
 		System.out.println("9: " + pets);
-		List<Integer> sub = pets.subList(1, 4);
+		List<String> sub = pets.subList(1, 4);
 		System.out.println("10: " + pets.containsAll(sub));
 		Collections.sort(sub);
 		System.out.println("Posle sortirovki: " + sub);
 		System.out.println("11: " + pets.containsAll(sub));
 		Collections.shuffle(sub, rand);
 		System.out.println("Posle peremeshivaniya: " + sub);
+		System.out.println("pets: " + pets);
 		System.out.println("12: " + pets.containsAll(sub));
-		List<Integer> copy = new ArrayList<Integer>(pets);
+		List<String> copy = new ArrayList<String>(pets);
 		sub = Arrays.asList(pets.get(1), pets.get(4));
 		System.out.println("sub: " + sub);
 		copy.retainAll(sub);
 		System.out.println("13: " + copy);
-		copy = new ArrayList<Integer>(pets);
+		copy = new ArrayList<String>(pets);
 		copy.remove(2);
 		System.out.println("14: " + copy);
 		copy.removeAll(sub);
 		System.out.println("15: " + copy);
-		copy.set(1, 404);
+		copy.set(1, "lol4");
 		System.out.println("16: " + copy);
 		copy.addAll(2, sub);
 		System.out.println("17: " + copy);
