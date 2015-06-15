@@ -7,7 +7,7 @@ public class Print373_3 {
 			arrayString.get(1);
 		} catch (IndexOutOfBoundsException ioobe) {
 			System.out.println("массив слишком мал для вашего запроса");
-	
+			System.err.println("vivod: " + ioobe);
 		}	
 	}
 }	
